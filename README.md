@@ -1,6 +1,5 @@
-# Video Concatenation Tool
-
-A Go application that concatenates multiple video files into a single output file using `ffmpeg` and `ffprobe`. The tool checks if video files have compatible properties and concatenates them without re-encoding if possible.
+# concat-video
+An application that concatenates multiple video files into a single output file using `ffmpeg` and `ffprobe`. The tool checks if video files have compatible properties and concatenates them without re-encoding if possible.
 
 ## Requirements
 

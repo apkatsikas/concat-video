@@ -1,0 +1,24 @@
+name: Check push
+
+on: [push]
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: ./go.mod
+      - name: Check Build
+        run: make check-build
+      - name: Install Staticcheck
+        run: make install-staticcheck
+      - name: Check Formatting
+        run: make check-formatting
+      - name: Staticcheck
+        run: make staticcheck
+      - name: Vet
+        run: make vet
